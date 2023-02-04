@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculate Result View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CalculateResultViewController" id="Y6W-OH-hqX" customClass="CalculateResultViewController" customModule="qualPorcentagem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você teve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-uL-hmq">
+                                <rect key="frame" x="142" y="249" width="109" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfG-u2-YkQ">
+                                <rect key="frame" x="166" y="413" width="61" height="23"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-Wa-c7d">
+                                <rect key="frame" x="142" y="536" width="109" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nmk-Wa-c7d" secondAttribute="trailing" constant="142" id="1jR-7S-TTY"/>
+                            <constraint firstItem="Qa9-uL-hmq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="190" id="7w0-Cf-k43"/>
+                            <constraint firstItem="hfG-u2-YkQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="166" id="FBf-hD-N13"/>
+                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="top" secondItem="hfG-u2-YkQ" secondAttribute="bottom" constant="100" id="gkd-os-Cu9"/>
+                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="142" id="m18-7r-dLH"/>
+                            <constraint firstItem="hfG-u2-YkQ" firstAttribute="top" secondItem="Qa9-uL-hmq" secondAttribute="bottom" constant="140" id="nXB-3P-YvT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qa9-uL-hmq" secondAttribute="trailing" constant="142" id="p02-rb-ihz"/>
+                            <constraint firstItem="Qa9-uL-hmq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="142" id="r1J-59-LA8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hfG-u2-YkQ" secondAttribute="trailing" constant="166" id="uBT-uT-Xv6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="nmk-Wa-c7d" id="CzU-VO-BKi"/>
+                        <outlet property="valueLabel" destination="hfG-u2-YkQ" id="JqG-a4-KMr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+</document>

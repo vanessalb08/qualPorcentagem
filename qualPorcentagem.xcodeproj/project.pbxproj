@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046A028E298EEDFF00B92750 /* CalculateResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A028D298EEDFF00B92750 /* CalculateResultViewController.storyboard */; };
 		04AAA4C6298EB827007497FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAA4C5298EB827007497FE /* AppDelegate.swift */; };
 		04AAA4C8298EB827007497FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAA4C7298EB827007497FE /* SceneDelegate.swift */; };
 		04AAA4CA298EB827007497FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAA4C9298EB827007497FE /* ViewController.swift */; };
 		04AAA4CD298EB827007497FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAA4CB298EB827007497FE /* Main.storyboard */; };
 		04AAA4CF298EB829007497FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AAA4CE298EB829007497FE /* Assets.xcassets */; };
 		04AAA4D2298EB829007497FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAA4D0298EB829007497FE /* LaunchScreen.storyboard */; };
+		04AAA4DA298EED90007497FE /* CalculateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAA4D9298EED90007497FE /* CalculateResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046A028D298EEDFF00B92750 /* CalculateResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculateResultViewController.storyboard; sourceTree = "<group>"; };
 		04AAA4C2298EB827007497FE /* qualPorcentagem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qualPorcentagem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AAA4C5298EB827007497FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AAA4C7298EB827007497FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		04AAA4CE298EB829007497FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04AAA4D1298EB829007497FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AAA4D3298EB829007497FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AAA4D9298EED90007497FE /* CalculateResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				04AAA4CE298EB829007497FE /* Assets.xcassets */,
 				04AAA4D0298EB829007497FE /* LaunchScreen.storyboard */,
 				04AAA4D3298EB829007497FE /* Info.plist */,
+				04AAA4D9298EED90007497FE /* CalculateResultViewController.swift */,
+				046A028D298EEDFF00B92750 /* CalculateResultViewController.storyboard */,
 			);
 			path = qualPorcentagem;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				04AAA4D2298EB829007497FE /* LaunchScreen.storyboard in Resources */,
 				04AAA4CF298EB829007497FE /* Assets.xcassets in Resources */,
 				04AAA4CD298EB827007497FE /* Main.storyboard in Resources */,
+				046A028E298EEDFF00B92750 /* CalculateResultViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 			files = (
 				04AAA4CA298EB827007497FE /* ViewController.swift in Sources */,
 				04AAA4C6298EB827007497FE /* AppDelegate.swift in Sources */,
+				04AAA4DA298EED90007497FE /* CalculateResultViewController.swift in Sources */,
 				04AAA4C8298EB827007497FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
