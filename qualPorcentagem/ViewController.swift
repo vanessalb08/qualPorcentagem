@@ -11,12 +11,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var initialValueTextField: UITextField!
     @IBOutlet weak var finalValueTextField: UITextField!
+    @IBOutlet weak var calculateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // adicionar estilização aos textFields(teclado, etc)
-        // guard let para remover os unraped
-        // impedir a divisão por 0 - obrigar a informar os 2 campos para ativar o botão
+        
+        initialValueTextField.keyboardType = .numberPad
+        finalValueTextField.keyboardType = .numberPad
+        calculateButton.isEnabled = false
+        
+        self.initialValueTextField.delegate = self
+        self.finalValueTextField.delegate = self
+        
     }
     
     func calculatePercent() -> Double{
@@ -38,6 +44,14 @@ class ViewController: UIViewController {
         }
         return "decréscimo de:"
     }
+    
+    func allFieldsFilled() {
+        if initialValueTextField.text != "" && finalValueTextField.text != ""{
+            calculateButton.isEnabled = true
+        } else {
+            calculateButton.isEnabled = false
+        }
+    }
 
     @IBAction func tappedCalculatedButton(_ sender: UIButton) {
         let resultView: CalculateResultViewController? = UIStoryboard(name: "CalculateResultViewController", bundle: nil).instantiateViewController(identifier: "CalculateResultViewController") {coder in return CalculateResultViewController(coder: coder, value: self.calculatePercent(), result: (self.resultPercent()))}
@@ -45,4 +59,17 @@ class ViewController: UIViewController {
     }
     
 }
-
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.yellow.cgColor
+        textField.layer.borderWidth = 1
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+        allFieldsFilled()
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

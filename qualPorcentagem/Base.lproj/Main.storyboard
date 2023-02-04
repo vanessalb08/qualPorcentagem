@@ -78,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="f5d-nY-W15"/>
                     <connections>
+                        <outlet property="calculateButton" destination="Tpe-0P-47X" id="TGL-GN-QUt"/>
                         <outlet property="finalValueTextField" destination="KdI-6P-fUm" id="MNZ-kp-N2Z"/>
                         <outlet property="initialValueTextField" destination="PmH-9B-MnU" id="iUa-Ec-OCr"/>
                     </connections>
