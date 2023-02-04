@@ -16,19 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você teve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-uL-hmq">
-                                <rect key="frame" x="142" y="249" width="109" height="24"/>
+                                <rect key="frame" x="50" y="249" width="109" height="24"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfG-u2-YkQ">
-                                <rect key="frame" x="166" y="413" width="61" height="23"/>
+                                <rect key="frame" x="166" y="413" width="61" height="23.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-Wa-c7d">
-                                <rect key="frame" x="142" y="536" width="109" height="24"/>
+                                <rect key="frame" x="169" y="249" width="109" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2d-8D-M2L">
+                                <rect key="frame" x="235" y="413" width="13" height="24"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="textColor" red="0.99966162439999995" green="0.97323542829999998" blue="0.4715711474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,15 +43,15 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nmk-Wa-c7d" secondAttribute="trailing" constant="142" id="1jR-7S-TTY"/>
                             <constraint firstItem="Qa9-uL-hmq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="190" id="7w0-Cf-k43"/>
+                            <constraint firstItem="Qa9-uL-hmq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="B8v-lf-5Ce"/>
                             <constraint firstItem="hfG-u2-YkQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="166" id="FBf-hD-N13"/>
-                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="top" secondItem="hfG-u2-YkQ" secondAttribute="bottom" constant="100" id="gkd-os-Cu9"/>
-                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="142" id="m18-7r-dLH"/>
-                            <constraint firstItem="hfG-u2-YkQ" firstAttribute="top" secondItem="Qa9-uL-hmq" secondAttribute="bottom" constant="140" id="nXB-3P-YvT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qa9-uL-hmq" secondAttribute="trailing" constant="142" id="p02-rb-ihz"/>
-                            <constraint firstItem="Qa9-uL-hmq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="142" id="r1J-59-LA8"/>
+                            <constraint firstItem="hfG-u2-YkQ" firstAttribute="top" secondItem="nmk-Wa-c7d" secondAttribute="bottom" constant="140" id="YrR-46-jwd"/>
+                            <constraint firstItem="Z2d-8D-M2L" firstAttribute="leading" secondItem="hfG-u2-YkQ" secondAttribute="trailing" constant="8" id="ZRI-tg-sxq"/>
+                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="leading" secondItem="Qa9-uL-hmq" secondAttribute="trailing" constant="10" id="g0r-Ym-Uqo"/>
+                            <constraint firstItem="nmk-Wa-c7d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="190" id="hRf-DU-f5b"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hfG-u2-YkQ" secondAttribute="trailing" constant="166" id="uBT-uT-Xv6"/>
+                            <constraint firstItem="Z2d-8D-M2L" firstAttribute="top" secondItem="nmk-Wa-c7d" secondAttribute="bottom" constant="140" id="zJP-iM-HgE"/>
                         </constraints>
                     </view>
                     <connections>
