@@ -25,19 +25,17 @@ class ViewController: UIViewController {
         
     }
     
-    func calculatePercent() -> Double{
-        var initialValue: Double = 0
-        var finalValue :Double = 0
-        
-        initialValue = Double(initialValueTextField.text!) ?? 0
-        finalValue = Double(finalValueTextField.text!) ?? 0
-        
-        var calculate = ((finalValue - initialValue) / initialValue) * 100
-        return calculate
+    func calculatePercent(initialValue: String, finalValue: String) -> Double{
+        guard let firstValue = Double(initialValue), let secondValue = Double(finalValue) else{
+            return 0.0
+        }
+        let difference = secondValue - firstValue
+        let percentageDifference = (difference / firstValue) * 100
+        return percentageDifference
     }
     
-    func resultPercent() -> String {
-        let result = calculatePercent()
+    func resultPercent(initialValue: String, finalValue: String) -> String {
+        let result = calculatePercent(initialValue: initialValue, finalValue: finalValue)
         
         if result >= 0{
             return "acréscimo de:"
@@ -54,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedCalculatedButton(_ sender: UIButton) {
-        let resultView: CalculateResultViewController? = UIStoryboard(name: "CalculateResultViewController", bundle: nil).instantiateViewController(identifier: "CalculateResultViewController") {coder in return CalculateResultViewController(coder: coder, value: self.calculatePercent(), result: (self.resultPercent()))}
+        let resultView: CalculateResultViewController? = UIStoryboard(name: "CalculateResultViewController", bundle: nil).instantiateViewController(identifier: "CalculateResultViewController") { [self]coder in return CalculateResultViewController(coder: coder, value: self.calculatePercent(initialValue: initialValueTextField.text ?? "", finalValue: finalValueTextField.text ?? ""), result: (self.resultPercent(initialValue: initialValueTextField.text ?? "", finalValue: finalValueTextField.text ?? "")))}
         self.present(resultView ?? UIViewController(), animated: true)
     }
     
