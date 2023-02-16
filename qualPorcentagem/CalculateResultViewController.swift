@@ -10,14 +10,11 @@ import UIKit
 class CalculateResultViewController: UIViewController {
 
     @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
     
-    let value: Double
-    let result: String
+    let value: String
     
-    init?(coder: NSCoder, value: Double, result: String) {
+    init?(coder: NSCoder, value: String) {
         self.value = value
-        self.result = result
         super.init(coder: coder)
     }
     
@@ -29,7 +26,6 @@ class CalculateResultViewController: UIViewController {
         super.viewDidLoad()
         
         valueLabel.text = String(value)
-        resultLabel.text = result
     }
     
 }

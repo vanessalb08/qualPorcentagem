@@ -25,23 +25,22 @@ class ViewController: UIViewController {
         
     }
     
-    func calculatePercent(initialValue: String, finalValue: String) -> Double{
+    func calculatePercent(initialValue: String, finalValue: String) -> String{
         guard let firstValue = Double(initialValue), let secondValue = Double(finalValue) else{
-            return 0.0
+            return ""
         }
         let difference = secondValue - firstValue
         let percentageDifference = (difference / firstValue) * 100
-        return percentageDifference
+        if percentageDifference >= 0{
+            let result = String(format:"acréscimo de %.2f",percentageDifference)
+            return "\(result)%"
+        }
+        else{
+            let result = String(format:"decréscimo de %.2f",percentageDifference)
+            return "\(result)%"
+        }
     }
     
-    func resultPercent(initialValue: String, finalValue: String) -> String {
-        let result = calculatePercent(initialValue: initialValue, finalValue: finalValue)
-        
-        if result >= 0{
-            return "acréscimo de:"
-        }
-        return "decréscimo de:"
-    }
     
     func allFieldsFilled() {
         if initialValueTextField.text != "" && finalValueTextField.text != ""{
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedCalculatedButton(_ sender: UIButton) {
-        let resultView: CalculateResultViewController? = UIStoryboard(name: "CalculateResultViewController", bundle: nil).instantiateViewController(identifier: "CalculateResultViewController") { [self]coder in return CalculateResultViewController(coder: coder, value: self.calculatePercent(initialValue: initialValueTextField.text ?? "", finalValue: finalValueTextField.text ?? ""), result: (self.resultPercent(initialValue: initialValueTextField.text ?? "", finalValue: finalValueTextField.text ?? "")))}
+        let resultView: CalculateResultViewController? = UIStoryboard(name: "CalculateResultViewController", bundle: nil).instantiateViewController(identifier: "CalculateResultViewController") { [self]coder in return CalculateResultViewController(coder: coder, value: self.calculatePercent(initialValue: initialValueTextField.text ?? "", finalValue: finalValueTextField.text ?? ""))}
         self.present(resultView ?? UIViewController(), animated: true)
     }
     
